@@ -1,3 +1,7 @@
 FROM java:8
 
-CMD ["java", "-version"]
+ADD simple_rest.tar .
+
+EXPOSE 4567
+
+ENTRYPOINT ["./simple_rest/bin/simple_rest"]
