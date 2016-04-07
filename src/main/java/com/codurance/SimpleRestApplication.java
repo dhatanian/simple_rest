@@ -8,7 +8,7 @@ import static spark.Spark.get;
 public class SimpleRestApplication {
     public static void main(String[] args) {
         get("/hello", respondWith(new HelloWorld().sayHelloWorld()));
-        get("/healthcheck", respondWith("OK"));
+        get("/healthcheck", respondWith("Yippee!"));
     }
 
     private static Route respondWith(Object responseBody){
